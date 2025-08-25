@@ -6,10 +6,10 @@ const router = express.Router();
 router.post("/chat", async (req, res) => {
   try {
     const { provider, model, prompt } = req.body;
-
+    
     let responseText;
 
-    if (provider === "openai") {
+    if (provider === "OpenAI") {
       responseText = await getFromGpt(model, prompt);
     } 
     // else if (provider === "mistral") {
